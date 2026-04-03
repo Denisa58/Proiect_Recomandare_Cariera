@@ -24,6 +24,14 @@ Utiliozatorul își creează un cont, completează un chestionar cu privire la i
 
     
   -Recomandarea de cursuri relevante pentru cariera care i se potrivește(ex. Udemy)
+  
+  ## Functionalitati/Exemple utilizare
+1. Autentificare și gestionare cont
+2. Completarea chestionarului de interese
+3. Generarea recomandarilor de carieră
+4. Recomandarea de cursuri relevante
+5. Vizualizarea rezultatelor
+
 
     
 *Conecatrea la o bază de date# Proiect_Recomandare_Cariera
