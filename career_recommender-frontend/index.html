@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem de Recomandare Carieră</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="authContainer" class="auth-wrapper">
+    <div class="auth-card-box">
+        <h2 style="color: #0056b3; margin-top: 0;">Autentificare</h2>
+        <p id="authHeaderMessage">Bine ai venit! Conectează-te sau înregistrează-te.</p>
+
+        <div id="loginPanel">
+            <form id="loginForm">
+                <h3 style="margin-bottom: 20px;">Conectare</h3>
+                <label for="login_username">Nume Utilizator:</label>
+                <input type="text" id="login_username" required>
+                <label for="login_password">Parolă:</label>
+                <input type="password" id="login_password" required>
+                <button type="submit" class="action-button" style="width: 100%; margin-top: 15px;">Login</button>
+                <p id="loginMessage" class="message-area"></p>
+                <p class="switch-link" style="text-align: center; margin-top: 20px;">
+                    Nu ai cont? <a href="#" id="showRegister">Înregistrează-te</a>
+                </p>
+            </form>
+        </div>
+
+        <div id="registerPanel" style="display: none;">
+            <form id="registerForm">
+                <h3 style="margin-bottom: 20px;">Înregistrare</h3>
+                <label for="reg_username">Nume Utilizator:</label>
+                <input type="text" id="reg_username" required>
+                <label for="reg_email">Email:</label>
+                <input type="email" id="reg_email" required>
+                <label for="reg_password">Parolă:</label>
+                <input type="password" id="reg_password" required>
+                <button type="submit" class="action-button" style="width: 100%; margin-top: 15px;">Înregistrare</button>
+                <p id="registerMessage" class="message-area"></p>
+                <p class="switch-link" style="text-align: center; margin-top: 20px;">
+                    Ai deja cont? <a href="#" id="showLogin">Conectează-te</a>
+                </p>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div id="welcomePanel" class="app-container" style="display: none;">
+    <h2 class="welcome-title" style="text-align: center;">Bun venit, <span id="welcomeUsername"></span>!</h2>
+
+    <nav class="nav-menu">
+        <button onclick="showSection('homePanel')" class="action-button">Acasă</button>
+        <button onclick="showSection('coursesPanel')" class="action-button">Explorare Cursuri</button>
+        <button id="logoutBtn" class="action-button" style="background-color: #dc3545;">Logout</button>
+    </nav>
+
+    <div id="homePanel" class="main-content-card">
+        <h3 style="text-align: center; color: #333; margin-bottom: 25px;">Acasă: Panoul de bord</h3>
+
+        <div style="display: flex; flex-direction: column; gap: 15px; align-items: center; margin-top: 20px;">
+            <button id="goToQuestionnaireBtn" class="action-button" style="width: 250px;">
+                📝 Completează Chestionarul
+            </button>
+
+            <button id="showRecommendationsBtn" class="action-button secondary" style="width: 250px;">
+                🚀 Vezi Recomandările
+            </button>
+        </div>
+
+        <div id="homeCoursesSection" style="margin-top: 40px;">
+            <div id="homeCoursesList" class="courses-grid">
+            </div>
+        </div>
+    </div>
+
+    <div id="coursesPanel" style="display: none; margin-top: 20px;">
+        <h3>Explorare Cursuri Disponibile</h3>
+        <div class="search-bar">
+            <input type="text" id="courseSearchInput" placeholder="Caută curs...">
+            <button type="button" onclick="handleSearch()" class="btn-search">Caută</button>
+            <button onclick="handleSync()" class="action-button sync-btn">Sincronizează</button>
+        </div>
+        <div id="coursesList" class="courses-grid"></div>
+    </div>
+
+    <div id="questionnaireContainer" style="display: none; margin-top: 20px;">
+        <p id="questionnaireMessage" class="message-area"></p>
+    </div>
+</div>
+
+<script src="js/auth.js"></script>
+</body>
+</html>

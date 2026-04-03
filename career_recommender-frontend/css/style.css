@@ -1,0 +1,305 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eef1f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* CONTAINER PRINCIPAL */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 80vh;
+    padding: 40px 20px;
+    background-color: #f4f7f9;
+}
+/* Stil pentru panoul de autentificare (#authContainer) */
+#authContainer {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    flex: 1 1 100%;
+}
+
+/* Stil pentru panoul de bun venit (dreapta) - Ocupă tot spațiul rămas */
+#welcomePanel {
+    flex-grow: 1;
+}
+
+/* Stil pentru card-uri (Home, Chestionar) */
+.main-content-card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Stil pentru Titlul de Bun Venit */
+.welcome-title {
+    color: #0056b3;
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Titluri */
+h2 {
+    color: #0056b3;
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Formulare și Input-uri */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+/* Input-urile si Butoanele ocupa 100% din spatiul lor */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+button[type="submit"] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+/* Stil Butoane Generale */
+button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Stil Butoane de Acțiune (Folosite în Home/Recomandări) */
+.action-button {
+    padding: 8px 15px;
+    font-size: 0.9em;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: auto;
+}
+
+.action-button.secondary {
+    background-color: #6c757d;
+}
+
+.action-button:hover {
+    opacity: 0.9;
+}
+
+/* Stil specific pentru butonul mic "Vezi mai mult" */
+.small-action-button {
+    margin-top: 15px;
+    width: auto;
+    padding: 6px 10px;
+    font-size: 0.8em;
+    background-color: #5bc0de;
+}
+
+.small-action-button:hover {
+    background-color: #31b0d5;
+}
+
+/* Stil pentru descrierea extinsă */
+.extended-details p {
+    font-size: 0.9em;
+    line-height: 1.4;
+    color: #444;
+}
+
+/* Mesaje */
+#registerMessage, #loginMessage, #questionnaireMessage {
+    padding: 10px 0;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Stil pentru link-urile de comutare Login/Register */
+.switch-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Stiluri Chestionar */
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    padding: 10px 0;
+    border-bottom: 1px dashed #eee;
+}
+
+.skill-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Range input/slider */
+.skill-row input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 8px;
+    background: #e0e0e0;
+    outline: none;
+    opacity: 0.8;
+    border-radius: 4px;
+    padding: 0;
+}
+
+/* --- Stiluri Recomandări (Grid și Carduri) --- */
+
+.navigation-options {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 20px;
+}
+
+.navigation-options h4 {
+    margin: 0;
+    padding-right: 15px;
+    font-size: 1em;
+    color: #555;
+}
+
+.recommendation-list {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.career-item {
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    background-color: #f9f9f9;
+}
+
+.career-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.career-item h3 {
+    color: #007bff;
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 1.4em;
+    border-bottom: none;
+}
+
+.career-description {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+
+.progress-bar-container {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 10px;
+    background-color: #28a745;
+    color: transparent;
+    transition: width 0.5s ease-in-out;
+}
+#coursesPanel.main-content-card {
+    max-width: 900px;
+}
+
+/* Fundalul gri pentru tot ecranul de login */
+.auth-wrapper {
+    display: flex;
+    justify-content: center; /* Centrează pe orizontală */
+    align-items: center;     /* Centrează pe verticală */
+    min-height: 100vh;       /* Ocupă toată înălțimea ecranului */
+    background-color: #f0f2f5; /* Opțional: un fundal gri deschis pentru contrast */
+    padding: 20px;
+}
+
+/* Stilul pentru cardul alb de login */
+.auth-card-box {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px; /* Limitează lățimea cardului pentru a arăta bine */
+    text-align: left;
+}
+
+/* Stil pentru restul aplicației (Full Width) */
+.app-container {
+    width: 100%;
+    max-width: 1200px; /* Cursurile se pot întinde mai mult */
+    margin: 0 auto;
+    padding: 20px;
+}
+/* Containerul care ține cardurile */
+.courses-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) !important;
+    gap: 20px !important;
+    padding: 20px 0;
+    width: 100%;
+}
+
+/* Stilul fiecărui card de curs */
+.course-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 180px;
+    transition: transform 0.2s;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+}
